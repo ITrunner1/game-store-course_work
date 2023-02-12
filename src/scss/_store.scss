@@ -1,0 +1,46 @@
+@use 'colors';
+
+.GameList {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;   
+  margin: {    
+    block: 10px 50px;
+    inline: calc(clamp(10px, 3vw, 50px) + 8px)
+  } 
+}
+
+.GameCard {
+  background-color: colors.$bg2;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 320px;
+  height: 300px;
+  background-color: rgb(36, 37, 41);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 30px;  
+
+  .Image {
+    height: 140px;
+    width: 100%;
+    background-position: center;    
+    background-size: cover;
+  }
+
+  .Info {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 24px;
+  }  
+
+  Button { 
+    padding: 18px 20px 20px;
+  }
+
+}
+

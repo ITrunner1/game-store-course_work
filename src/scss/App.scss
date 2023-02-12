@@ -1,6 +1,7 @@
 @use '_header';
 @use '_sidebar';
 @use '_colors';
+@use '_store';
 
 body {
     font-family: 'Inter', sans-serif;
@@ -8,4 +9,8 @@ body {
     background-color: colors.$bg2;    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
- }
+}
+
+.main-content { 
+    margin: 8rem;
+}

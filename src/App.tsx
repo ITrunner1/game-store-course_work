@@ -7,16 +7,16 @@ import {
 } from 'react-router-dom'
 
 import Root from './pages/Root';
-import Store from './pages/Store';
+import { Store } from './pages';
 import './scss/App.scss';
 
-function App() {
+const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route path="root" element={<Root />} />
-        <Route path="home" element={<h1>Home</h1>} />
         <Route path="store" element={<Store />} />  
+        <Route path="home" element={<h1>Home</h1>} />        
         <Route path="games" element={<h1>Games</h1>} />   
         <Route path="bookmarks" element={<h1>Bookmarks</h1>} /> 
         <Route path="settings" element={<h1>Settings</h1>} />   
@@ -25,7 +25,7 @@ function App() {
    );
 
   return (
-     <RouterProvider router = {router}></RouterProvider>
+      <RouterProvider router = {router}></RouterProvider>
   );
 }
 
