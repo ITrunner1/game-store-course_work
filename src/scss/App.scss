@@ -1,0 +1,11 @@
+@use '_header';
+@use '_sidebar';
+@use '_colors';
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    background-color: colors.$bg2;    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+ }
