@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     gap: 13rem;
-    width: 100vw;
+    width: 99vw;
     height: 5rem;
     padding-right: 2.2rem;
     background-color: colors.$bg;
@@ -18,7 +18,13 @@
     .right {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
+        color: white;
+
+        .sidebar-show-btn { 
+          margin-right: 12px;
+          margin-top: 4px;         
+        }
         
         .logo { 
           align-self: stretch;
@@ -32,5 +38,27 @@
           }
         }
 
+        .vert-line { 
+          border-left: 1px solid white;
+          height: 40px;          
+        }
+        
+        .cart-btn{
+          position: relative;
+          .cart-items-value{
+              position: absolute;
+              top: -10px;
+              right: -12px;
+              background-color: none;
+              font-size: 14px;
+              font-weight: 500;
+              color: white;
+              padding: 0 0.5rem;          
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+        }
     }
 }

@@ -3,12 +3,15 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  Route
+  Route,
+  BrowserRouter
 } from 'react-router-dom'
 
 import Root from './pages/Root';
 import { Store } from './pages';
 import './scss/App.scss';
+import store from './redux/Store/Store';
+import { Provider } from 'react-redux';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -25,7 +28,9 @@ const App = () => {
    );
 
   return (
-      <RouterProvider router = {router}></RouterProvider>
+      <Provider store = {store}>
+        <RouterProvider router={router}></RouterProvider>
+      </Provider>
   );
 }
 

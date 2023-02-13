@@ -2,6 +2,9 @@
 @use '_sidebar';
 @use '_colors';
 @use '_store';
+@use '_cart';
+@use '_search';
+@use '_menu';
 
 body {
     font-family: 'Inter', sans-serif;
@@ -9,6 +12,7 @@ body {
     background-color: colors.$bg2;    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'GT Walsheim Pro';
 }
 
 .main-content { 

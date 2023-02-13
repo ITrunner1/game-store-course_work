@@ -1,0 +1,28 @@
+@use '_colors';
+
+.search { 
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1 0 25rem;
+
+    .icon { 
+        position: absolute;
+        left: 1.2rem;
+        height: 1.8rem;
+        width: 1.8rem;
+        fill: colors.$bg;
+    }
+
+    .input { 
+        width: 40rem;
+        height: 2.5rem;
+        border-radius: 0.3rem;
+        padding: 0 4.5rem;
+        border: 0;
+        background-color: white;
+        font-size: 1.4rem;
+    }
+
+   
+}
