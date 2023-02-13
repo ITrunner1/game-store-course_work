@@ -5,10 +5,12 @@
 @use '_cart';
 @use '_search';
 @use '_menu';
+@use '_home';
 
 body {
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
+    color: white;
     background-color: colors.$bg2;    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
