@@ -6,10 +6,13 @@ import GameCard from '../components/Store/GameCard';
 import Menu from '../layouts/Menu';
 const Store = () => { 
   return (
-    <Transition className="GameList" direction="right"> 
-    <div className="GameList">
-        { games.map(game => <GameCard game={game} key={game.id}/>) }
-    </div>
+    <Transition direction="right">
+      <div className='store-title'>
+        <h1>Games</h1>
+      </div>
+      <div className="GameList">
+          { games.map(game => <GameCard game={game} key={game.id}/>) }
+      </div>
     </Transition>
   );
 }
