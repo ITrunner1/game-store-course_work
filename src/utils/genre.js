@@ -1,4 +1,4 @@
-const categories = [     
+const genres = [     
     "Adventure",
     "Action-adventure",
     "Action",
@@ -6,9 +6,13 @@ const categories = [
     "Horror",
     "Masocore",
     "Massively multiplayer online",
-    "Rope-playing",
+    "RPG",
     "Simulation",
-    "Strategy"
+    "Strategy",
+    "Shooter",
+    "Puzzle",
+    "Racing",
+    "Sports"
 ]
 
-export default categories;
+export default genres;

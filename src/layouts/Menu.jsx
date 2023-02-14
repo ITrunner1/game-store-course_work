@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { IoListSharp } from 'react-icons/io5';
 import { getMenuStatus, setMenuOff } from '../redux/Store/menuSlice';
-import categories from '../utils/categories';
+import genres from '../utils/genre';
 
 const Menu = () => {
 
@@ -19,13 +19,13 @@ const Menu = () => {
                <IoListSharp /> 
             </button>
             <div className="menu-cat">
-                <div className="cat-title">All Categories</div>
+                <div className="cat-title">All Genres</div>
                 <ul className="cat-list">
                     {
-                        categories.map((category, idx) => { 
+                        genres.map((genre, idx) => { 
                             return (
                                 <li key = {idx}>
-                                    <Link to = {`category/${category}`} className="cat-list-link">{category.replace("-", " ")}</Link>
+                                    <Link to = {`genre/${genre}`} className="cat-list-link">{genre.replace("-", " ")}</Link>
                                 </li>
                             )
                     })
