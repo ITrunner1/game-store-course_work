@@ -3,7 +3,7 @@ import menuReducer from './menuSlice';
 
 const store = configureStore( { 
     reducer: { 
-        menu: menuReducer        
+        menu: menuReducer,
     }
 });
 

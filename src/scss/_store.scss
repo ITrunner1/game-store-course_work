@@ -1,6 +1,7 @@
 @use 'colors';
 
-.GameList {
+.GameList{
+  row-gap: 2rem;
   display: flex;
   flex-wrap: wrap;  
   justify-content: space-around;   
@@ -8,19 +9,36 @@
     block: 10px 50px;
     inline: calc(clamp(10px, 3vw, 50px) + 8px)
   } 
+
+  @media screen and (min-width: 576px){
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.4rem;
+  }
+
+  @media screen and (min-width: 768px){
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1200px){
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 1400px){
+      grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .GameCard {
   background-color: colors.$bg2;
   color: white;
   border-radius: 15px;
-  overflow: hidden;
-  width: 320px;
-  height: 300px;
+  overflow: hidden;  
+  width: 320px; 
   background-color: rgb(36, 37, 41);
   border-radius: 15px;
   position: relative;
   cursor: pointer;
+  padding-bottom: 20px;
   margin-bottom: 30px;  
 
   .Image {
@@ -28,15 +46,31 @@
     width: 100%;
     background-position: center;    
     background-size: cover;
-  }
+  } 
 
-  .Info {
+  .Info {    
     padding: 18px 20px 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 24px;
-  }  
+    gap: 10px;    
+
+    .Genre{
+      position: absolute;
+      left: -5px;
+      top: 1.6rem;
+      background-color: colors.$bg;
+      color: white;
+      font-size: 18px;
+      text-transform: capitalize;
+      padding: 0.2rem 1rem;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    
+    }  
+  }
+
+  .Price {   
+    padding-left: 20px;
+  }
 
   Button { 
     padding: 18px 20px 20px;

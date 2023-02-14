@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { IoListSharp } from 'react-icons/io5';
 import { getMenuStatus, setMenuOff } from '../redux/Store/menuSlice';
-import genres from '../utils/genre';
+import genres from '../utils/genres';
 
 const Menu = () => {
 

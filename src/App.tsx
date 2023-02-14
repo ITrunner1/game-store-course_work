@@ -13,6 +13,7 @@ import './scss/App.scss';
 import store from './redux/Store/store';
 import { Provider } from 'react-redux';
 import Home from './pages/Home';
+import GameDetails from './pages/GameDetails';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/" element={<Root />}>
         <Route path="root" element={<Root />} />
         <Route path="store" element={<Store />} />  
+        <Route path="store/:id" element={<GameDetails />} />       
         <Route path="home" element={<Home />} />        
         <Route path="games" element={<h1>Games</h1>} />   
         <Route path="bookmarks" element={<h1>Bookmarks</h1>} /> 

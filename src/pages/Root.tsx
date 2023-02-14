@@ -4,7 +4,7 @@ import Header from '../layouts/Header';
 import Menu from '../layouts/Menu';
 import Sidebar from '../layouts/Sidebar';
 
-function Root() {
+function Root() {   
     return (
         <>
         <Header />
