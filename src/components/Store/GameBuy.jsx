@@ -1,4 +1,5 @@
 import React from 'react';
+
 import games from '../../utils/games';
 
 export const GameBuy = ( { game }) => {  

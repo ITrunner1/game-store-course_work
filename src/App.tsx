@@ -1,38 +1,32 @@
-import React from 'react';
+import { Provider } from 'react-redux';
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
   Route,
-  BrowserRouter
+  Routes,
+  BrowserRouter,
 } from 'react-router-dom'
 
-import Root from './pages/Root';
 import { Store } from './pages';
-import './scss/App.scss';
-import store from './redux/Store/store';
-import { Provider } from 'react-redux';
+import Root from './pages/Root';
 import Home from './pages/Home';
-import GameDetails from './pages/GameDetails';
+import GamePageDetails from './pages/GamePageDetails';
+import store from './redux/Store/store';
+import './scss/App.scss';
+
 
 const App = () => {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<Root />}>
-        <Route path="root" element={<Root />} />
-        <Route path="store" element={<Store />} />  
-        <Route path="store/:id" element={<GameDetails />} />       
-        <Route path="home" element={<Home />} />        
-        <Route path="games" element={<h1>Games</h1>} />   
-        <Route path="bookmarks" element={<h1>Bookmarks</h1>} /> 
-        <Route path="settings" element={<h1>Settings</h1>} />   
-      </Route>
-    )
-   );
 
   return (
       <Provider store = {store}>
-        <RouterProvider router={router}></RouterProvider>
+        <BrowserRouter>
+        <Routes>
+        <Route path='/' element={<Root />}>
+          <Route path="home" element={<Home />} />
+          <Route path='store' element={<Store />} />             
+          <Route path='/store/:id' element={<GamePageDetails />} />         
+          <Route path='*' element={<h1>Error</h1>} />
+        </Route>
+        </Routes>
+        </BrowserRouter>
       </Provider>
   );
 }

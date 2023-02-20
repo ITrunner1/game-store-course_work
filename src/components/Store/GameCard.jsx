@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+
 import { Transition } from '../../components';
 import { GameCover } from './GameCover';
 import { GameBuy } from './GameBuy';
 
-const GameCard = ({ game }) => {
+export const GameCard = ({ game }) => {
     const [isHovered, setIsHovered] = useState(false);
-    
-    return (               
-        <Link to = {`${game?.id}`} key={game?.id}>        
-        <div className="GameCard">                     
+
+    return (
+        <div className="GameCard" key={ game.id }>  
+        <Link to = {`/store/${game.id}` }>                   
             <GameCover background_image={game.background_image} />
             <motion.div 
                 className='Info'
@@ -32,11 +33,10 @@ const GameCard = ({ game }) => {
                         )}                        
                     </AnimatePresence>            
             </motion.div>  
-            <div className='Price'>{game?.price}$</div>
-            
-        </div>      
-        </Link>  
-    );
+            <div className='Price'>{game.price}$</div>
+        </Link>      
+        </div>
+    )
 }
 
 export default GameCard;

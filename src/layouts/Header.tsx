@@ -1,7 +1,7 @@
-import React from 'react';
 import { IoCartOutline, IoListSharp } from 'react-icons/io5';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import logo from '../assets/logo.png';
 import Search from '../components/Search';
 import { setMenuOn } from '../redux/Store/menuSlice';

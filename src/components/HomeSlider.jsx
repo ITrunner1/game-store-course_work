@@ -1,8 +1,9 @@
 import { sliderImgs } from "../utils/images";
+import { SliderRoot } from "@mui/material";
 import Slider from 'react-slick';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { SliderRoot } from "@mui/material";
 
 const HomeSlider = () => {
     const settings = {

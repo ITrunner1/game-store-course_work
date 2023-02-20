@@ -1,8 +1,6 @@
-import { useSelector } from 'react-redux';
 import { Transition } from '../components';
+import { GameCard } from '../components/Store/GameCard';
 import games from '../utils/games';
-import GameCard from '../components/Store/GameCard';
-import Menu from '../layouts/Menu';
 import genres from '../utils/genres';
 import GamesList from '../components/Store/GameList';
 
