@@ -1,0 +1,101 @@
+@use '_colors';
+
+.EmptyCartPage{
+    min-height: 60vh;
+    img{
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+    .shopping-btn{
+        padding: 0.65rem 2.8rem;
+        margin-top: 1.6rem;
+        border: 1px solid;
+    
+    }
+}
+
+.CartPage{
+    overflow-x: scroll;
+    padding-top: 2rem;
+    min-height: 85vh;
+
+    .Container{
+        text-align: center;       
+        .Columns{
+            grid-template-columns: 1fr 4fr 2fr 2fr 2fr 2fr;
+            min-height: 40px;           
+            display: grid;
+            align-items: center!important;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .Image { 
+            width: 400px;            
+        }
+
+        .CartHeader{
+            margin-bottom: 2rem;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
+            border-radius: 3px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .CartBody{
+            padding-right: 2rem;
+            padding-left: 2rem;
+            box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
+            border-radius: 3px;
+            font-size: 14.5px;
+            color: rgba(0, 0, 0, 0.6);
+
+
+        }
+
+        .DeleteBtn{
+            font-size: 22px;    
+            transition: colors.$transition-ease; 
+            background: none;
+            color: colors.$white; 
+            border: none;
+            
+            &:hover{
+                color: colors.$clr-danger;
+            }
+            } 
+        }
+
+        .CartFooter{
+            margin-top: 2rem;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            display: flex;         
+
+            .CartFooter-txt{
+                margin-right: -1rem;
+            }
+
+            .ClearCartBtn{
+                border: 1px solid colors.$clr-danger;;
+                padding: 0.8rem 1rem; 
+                transition: colors.$transition-ease;
+                background: none;
+                color: white;   
+                font-size: 20px;            
+                
+                &:hover{
+                    background-color: colors.$clr-danger;
+                    
+                }
+
+                .Icon { 
+                    vertical-align: middle;
+                }
+            }
+            .checkout-btn{
+                padding: 0.8rem 2.8rem;
+                margin-top: 0.7rem;
+            }
+        }
+    }

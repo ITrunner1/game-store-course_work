@@ -1,24 +1,37 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { IoArrowDown,
          IoArrowUp 
 } from 'react-icons/io5';
 
 import { Transition } from '../components';
+import { addToCart, setCartMessageOn, setCartMessageOff, getCartMessageStatus } from '../redux/cartSlice';
 import games from '../utils/games';
 import GamePageDetailsSlider from '../components/GamePageDetailsSlider'
+import CartMessage from '../components/Cart/CartMessage'
 
 
-const GamePageDetails = () => {   
-    const {id} = useParams();    
+const GamePageDetails = () => {  
+    const { t } = useTranslation(); 
+    const dispatch = useDispatch();
+    const {id} = useParams();        
     const game = games.find((game) => game.id === id);
-    const [isExpanded, setIsExpanded] = useState(false);  
+    const [isExpanded, setIsExpanded] = useState(false); 
+    const cartMessageStatus = useSelector(getCartMessageStatus)
+    
+    const addToCartHandler = (game) => { 
+        let totalPrice = game.price;
+        dispatch(addToCart({...game, totalPrice}))        
+    }
 
+    
     return (         
         <Transition className="GameDetails" direction="left"> 
             <div className="Header">                
-                <div><Link to="/store">To store</Link></div>
+                <div><Link to="/store">{t("to store")}</Link></div>
                 <div className="GameName">{game.name}</div> 
             </div>              
             <Transition className="Grid" direction="left">               
@@ -26,14 +39,14 @@ const GamePageDetails = () => {
                     <Transition className="Info">
                         <div>                
                             <a href={game.link}>
-                                {game.name} Website
+                                {t("website")}: {game.name}
                             </a>
                         </div>
-                        <p>Released: {game.release}</p>
-                        <p>Platforms: {game.platforms}</p> 
-                        <p>Genres: {game.genre}</p>  
-                        <p>Developers: {game.developers}</p> 
-                        <p>Publishers: {game.publishers}</p>
+                        <p>{t("released")}: {game.release}</p>
+                        <p>{t("platforms")}: {game.platforms}</p> 
+                        <p>{t("genres")}: {game.genre}</p>  
+                        <p>{t("developer")}: {game.developers}</p> 
+                        <p>{t("publisher")}: {game.publishers}</p>
                             <motion.div
                                 className="GameDescription"
                                 initial={false}
@@ -54,7 +67,7 @@ const GamePageDetails = () => {
                                                 className='Expand'
                                                 layoutId="expand-button"
                                             >
-                                                <button className="Button" onClick={() => setIsExpanded(false)}>Hide <IoArrowUp /></button>
+                                                <button className="Button" onClick={() => setIsExpanded(false)}>{t("hide")} <IoArrowUp /></button>
                                             </motion.div> 
                                         </Transition>
                                         </>
@@ -62,17 +75,18 @@ const GamePageDetails = () => {
                                             className='Expand'
                                             layoutId="expand-button"
                                             >
-                                            <button className="Button" onClick={() => setIsExpanded(true)}>More <IoArrowDown /></button>
+                                            <button className="Button" onClick={() => setIsExpanded(true)}>{t("more")} <IoArrowDown /></button>
                                         </motion.div> 
                                     }
                             </motion.div>  
                             <div className="Price">
-                                ${game.price}
+                                {game.price}
                                      <Transition className="Added">
-                                        Added 
+                                        {t("added")} 
                                     </Transition>
-                                     <button>
-                                        Add to cart 
+                                     <button 
+                                        onClick={() => { addToCartHandler(game) }}>
+                                        {t("add to cart")} 
                                     </button>
                             </div>                                 
                     </Transition> 

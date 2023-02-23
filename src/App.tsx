@@ -9,7 +9,9 @@ import { Store } from './pages';
 import Root from './pages/Root';
 import Home from './pages/Home';
 import GamePageDetails from './pages/GamePageDetails';
-import store from './redux/Store/store';
+import CartPage from './pages/CartPage';
+import Settings from './pages/Settings';
+import store from './redux/store';
 import './scss/App.scss';
 
 
@@ -21,7 +23,9 @@ const App = () => {
         <Routes>
         <Route path='/' element={<Root />}>
           <Route path="home" element={<Home />} />
-          <Route path='store' element={<Store />} />             
+          <Route path='store' element={<Store />} /> 
+          <Route path="cart" element={<CartPage />} />      
+          <Route path="settings" element={<Settings />} />     
           <Route path='/store/:id' element={<GamePageDetails />} />         
           <Route path='*' element={<h1>Error</h1>} />
         </Route>

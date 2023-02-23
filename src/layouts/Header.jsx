@@ -1,14 +1,15 @@
 import { IoCartOutline, IoListSharp } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import logo from '../assets/logo.png';
 import Search from '../components/Search';
-import { setMenuOn } from '../redux/Store/menuSlice';
-import { getMenuStatus } from '../redux/Store/menuSlice';
+import { setMenuOn } from '../redux/menuSlice';
+import { getMenuStatus } from '../redux/menuSlice';
 
-function Header() {
-
+function Header() {    
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     
     return (
@@ -29,11 +30,11 @@ function Header() {
                     <Search />                 
                 </section>
                 <section className="right">
-                    <span className="reg">Register</span>
+                    <span className="reg">{t("register")}</span>
                     <div className="vert-line"></div>
-                    <span className="reg">Log in</span>
+                    <span className="reg">{t("log in")}</span>
                     <div className = "cart">
-                        <Link to = "" className="cart-btn">
+                        <Link to = "/cart" className="cart-btn">
                             <IoCartOutline />
                             <div className = "cart-items-value">0</div>
                         </Link>

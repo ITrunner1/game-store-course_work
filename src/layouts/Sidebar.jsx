@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { StyledTooltip } from '../styles/StyledTooltip';
 import { Tabs, Tab } from '@mui/material';
@@ -6,24 +7,22 @@ import { Tabs, Tab } from '@mui/material';
 import { 
   IoHome,
   IoStorefront,
-  IoGameController,
-  IoBookmark,
+  IoCart,
   IoSettings
 } from 'react-icons/io5'
 
 function Sidebar() {
+    const { t } = useTranslation(); 
     const sideNavIcons = [
         IoHome, 
         IoStorefront,
-        IoGameController,    
-        IoBookmark,
+        IoCart,           
         IoSettings,
       ];
       const paths = [
         'home',
         'store',
-        'games',   
-        'bookmarks',
+        'cart',   
         'settings',
       ];    
       const location = useLocation();  
@@ -40,7 +39,7 @@ function Sidebar() {
         className="sidebar"
       >
         {sideNavIcons.map((SideNavIcons, id) => (
-          <StyledTooltip title={paths[id]} placement="right" key={id}>
+          <StyledTooltip title={t(paths[id])} placement="right" key={id}>
             <Tab
               icon={<SideNavIcons className="icon"/>}
               sx={{ minWidth: 0, py: '2rem' }}

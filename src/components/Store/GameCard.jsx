@@ -1,13 +1,23 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { Button } from '@mui/material';
 
+import { addToCart } from '../../redux/cartSlice';
 import { Transition } from '../../components';
 import { GameCover } from './GameCover';
-import { GameBuy } from './GameBuy';
 
 export const GameCard = ({ game }) => {
-    const [isHovered, setIsHovered] = useState(false);
+    const { t } = useTranslation();
+    const dispatch = useDispatch();
+    const [isHovered, setIsHovered] = useState(false);   
+
+    const addToCartHandler = (game) => { 
+        let totalPrice = game.price;       
+        dispatch(addToCart({...game, totalPrice}))
+    }
 
     return (
         <div className="GameCard" key={ game.id }>  
@@ -25,16 +35,22 @@ export const GameCard = ({ game }) => {
                         {isHovered && (
                             <Transition className = "MoreInfo">                                
                                 <div className="Developer fs-18">
-                                    <div className="py-1">Developer: {game.developers}</div>                                    
-                                    <div className="py-1">Publisher: {game.publishers}</div>
-                                    <div className="py-1">Platforms: {game.platforms}</div>                                    
+                                    <div className="py-1">{t("developer")}: {game.developers}</div>                                    
+                                    <div className="py-1">{t("publisher")}: {game.publishers}</div>
+                                    <div className="py-1">{t("platforms")}: {game.platforms}</div>                                    
                                 </div>  
                             </Transition>
                         )}                        
                     </AnimatePresence>            
-            </motion.div>  
-            <div className='Price'>{game.price}$</div>
-        </Link>      
+            </motion.div> 
+        </Link>    
+            <div className='Price'>
+                {game.price}$
+                <Button 
+                    onClick={() => { addToCartHandler(game) }}>
+                    {t("add to cart")}
+                </Button>             
+            </div>           
         </div>
     )
 }

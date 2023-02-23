@@ -1,11 +1,13 @@
-import { sliderImgs } from "../utils/images";
-import { SliderRoot } from "@mui/material";
 import Slider from 'react-slick';
+import { sliderImgs } from "../utils/images";
+import { useTranslation } from 'react-i18next';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const HomeSlider = () => {
+    const { t } = useTranslation();
+
     const settings = {
         autoplay: true,
         autoplaySpeed: 3000,
@@ -19,7 +21,7 @@ const HomeSlider = () => {
 
     return (        
         <div className="slider">
-          <h1>Home</h1>
+          <h1>{t("home")}</h1>
           <div className="container">
             <div className="slider-container">
               <Slider {...settings}>
