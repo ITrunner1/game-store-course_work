@@ -1,55 +1,61 @@
 @use '_colors.scss';
 
-.header {
+.Header {
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
-    gap: 13rem;
+    justify-content: space-between;   
     width: 99vw;
-    height: 5rem;
-    padding-right: 2.2rem;
+    height: 5rem;    
     background-color: colors.$bg;
     z-index: 100;
 
-    .left,
-    .middle,
-    .right {
+    .Left,
+    .Middle,
+    .Right {
         display: flex;
         align-items: center;
         gap: 1rem;
         color: white;
 
-        .sidebar-show-btn { 
-          margin-right: 12px;
-          margin-top: 4px;         
+        .HeaderMenuButton { 
+          padding-right: 1rem;
+          .Icon { 
+            width: 36px;           
+            height: 36px;
+            color: colors.$clr-light;
+          }
         }
         
-        .logo { 
-          align-self: stretch;
+        .Logo {           
           display: flex;
-          align-items: center;
-          justify-content: center;
           width: 5.5rem;        
 
-          .image { 
+          .Image { 
             height: 5rem;
           }
         }
 
-        .vert-line { 
+        .VertLine { 
           border-left: 1px solid white;
           height: 40px;          
         }
         
-        .cart-btn{
+        .CartBtn{
           position: relative;
-          .cart-items-value{
+          margin-right: 20px;
+
+          .Icon { 
+            width: 32px;
+            height: 32px;
+          }         
+          
+          .CartItems-value {
               position: absolute;
-              top: -10px;
+              top: -14px;
               right: -12px;
-              background-color: none;
+              background-color: colors.$bg;
               font-size: 14px;
               font-weight: 500;
               color: white;
@@ -59,6 +65,10 @@
               align-items: center;
               justify-content: center;
           }
-        }
+        }       
+    }
+
+    @media screen and (max-width: 600px) {      
+      height: 20px;      
     }
 }

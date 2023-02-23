@@ -1,29 +1,37 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { IoListSharp } from 'react-icons/io5';
+import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@mui/material';
+import { motion } from 'framer-motion';
 
 import { getMenuStatus, setMenuOff } from '../redux/menuSlice';
 import genres from '../utils/genres';
+import { Transition } from '../components';
 
 const Menu = () => {
 
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const isMenuOn = useSelector(getMenuStatus);   
+    const isMenuOn = useSelector(getMenuStatus);
+    
+    const closeMenu = () => {
+        dispatch(setMenuOff());        
+    };   
 
     return (
-        <aside className={`menu ${isMenuOn ? 'hide-menu' : ""}`}>
-            <button 
+        
+        <aside className={`Menu ${isMenuOn ? 'hide-menu' : ""}`}>
+            <Button 
                 type="button"
-                className="menu-hide-btn"
-                onClick={() => dispatch(setMenuOff())}
+                className="Menu-hide-btn"
+                onClick={closeMenu}
             >
-               <IoListSharp /> 
-            </button>
-            <div className="menu-cat">
-                <div className="cat-title">{t("all genres")}</div>
-                <ul className="cat-list">
+               <IoIosCloseCircleOutline className="Icon" /> 
+            </Button>
+            <div className="MenuGenres">
+                <div className="Genres-title">{t("all genres")}</div>
+                <ul className="Genres-list">
                     {
                         genres.map((genre, idx) => { 
                             return (
@@ -35,7 +43,8 @@ const Menu = () => {
                     }
                 </ul>
             </div>
-        </aside>
+            </aside>       
+            
     );
 }
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { StyledTooltip } from '../styles/StyledTooltip';
-import { Tabs, Tab } from '@mui/material';
+import { Tabs, Tab, useMediaQuery } from '@mui/material';
 
 import { 
   IoHome,
@@ -29,14 +29,19 @@ function Sidebar() {
       const active = paths.indexOf(location.pathname.split('/')[1]);
       const [value, setValue] = useState(active === -1 ? 1 : active);
 
+      const matches = useMediaQuery('(max-width: 600px)');
+
       return (
         <Tabs
-        orientation="vertical"
+        orientation={matches ? "horizontal" : 'vertical'}
         value={value}
         onChange={(_, newValue) => setValue(newValue)}
-        sx={{ '& .MuiTabs-indicator': { right: 'initial' } }}
+        sx={{ 
+          '& .MuiTabs-indicator': { right: 'initial' },
+          '& .MuiTabs-flexContainer': { justifyContent: 'space-evenly' },
+        }}
         component="nav"
-        className="sidebar"
+        className="Sidebar"
       >
         {sideNavIcons.map((SideNavIcons, id) => (
           <StyledTooltip title={t(paths[id])} placement="right" key={id}>

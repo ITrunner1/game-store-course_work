@@ -1,3 +1,4 @@
+import { ButtonGroup, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 const Settings = () => {
@@ -9,17 +10,19 @@ const Settings = () => {
 
     return (
         <div className="SettingsPage"> 
-            <div className="Title">{t("settings")}</div>
+            <h1 className="Title">{t("settings")}</h1>
             <div className='ChangeLanguage'>
-                <span>{t("change language")}: </span>         
-                <button onClick={() => changeLanguage('en')}>English</button>
-                <button onClick={() => changeLanguage('ru')}>Russian</button>
-                <button onClick={() => changeLanguage('ger')}>Deutsch</button>
-                <button onClick={() => changeLanguage('jap')}>日本</button>
-                <button onClick={() => changeLanguage('chi')}>简体中文</button>
-            </div>
-            <div className="Title">{t("settings")}</div>
-        </div>
+                <span>{t("change language")}: </span> 
+                <ButtonGroup varian="contained" aria-label="outlined button group">        
+                    <Button onClick={() => changeLanguage('en')}>English</Button>
+                    <Button onClick={() => changeLanguage('ru')}>Russian</Button>
+                    <Button onClick={() => changeLanguage('ger')}>Deutsch</Button>
+                    <Button onClick={() => changeLanguage('jap')}>日本</Button>
+                    <Button onClick={() => changeLanguage('chi')}>简体中文</Button>
+                </ButtonGroup>
+            </div>    
+            <div className="ChooseTheme">{t("theme")}:</div>       
+        </div>        
     );
 }
 
