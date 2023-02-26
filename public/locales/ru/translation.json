@@ -41,5 +41,19 @@
     "Shooter": "Шутеры",
     "Puzzle": "Пазлы",
     "Racing": "Гонки",
-    "Sports": "Спортивные"
+    "Sports": "Спортивные",
+
+    "don't overpay for games": "Не переплачивай за игры",
+    "go to store without auth": "Перейти в магазин без авторизации",
+    "go to store": "В магазин",
+    "email address": "Адрес электронной почты",
+    "password": "Пароль",
+    "forget password": "Забыли пароль",
+    "first time": "Впервые здесь",
+    "create an account": "Создать аккаунт",
+    "back to landing page": "Вернуться на входную страницу",
+    "sign up": "Регистрация",
+    "create your personal account": "Создайте ваш личный аккаунт",
+    "settings are only available to registered users": "Настройки доступны только для зарегистрированных пользователей",
+    "you are already logged in": "Вы уже авторизовались"
 }

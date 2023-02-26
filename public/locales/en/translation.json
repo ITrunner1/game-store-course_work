@@ -41,6 +41,19 @@
     "Shooter": "Shooter",
     "Puzzle": "Puzzle",
     "Racing": "Racing",
-    "Sports": "Sports"
+    "Sports": "Sports",
 
+    "don't overpay for games": "Don't overpay for games",
+    "go to store without auth": "Go to store without authorization",
+    "go to store": "Go to store",
+    "email address": "Email address",
+    "password": "Password",
+    "forget password": "Forget password",
+    "first time": "First time",
+    "create an account": "Create an account",
+    "back to landing page": "Back to landing page",
+    "sign up": "Sign up",
+    "create your personal account": "Create your personal account",
+    "settings are only available to registered users": "Settings are only available to registered users",
+    "you are already logged in": "You are already logged in"
 }

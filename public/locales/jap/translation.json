@@ -41,5 +41,19 @@
     "Shooter": "シューター",
     "Puzzle": "パズル",
     "Racing": "レーシング",
-    "Sports": "スポーツ"
+    "Sports": "スポーツ",
+
+    "don't overpay for games": "ゲームにお金を払いすぎない",
+    "go to store without auth": "許可なく店に行く",
+    "go to store": "店に行く",
+    "email address": "電子メールアドレス",
+    "password": "パスワード",
+    "forget password": "パスワードを忘れた",
+    "first time": "初めて",
+    "create an account": "アカウントを作成する",
+    "back to landing page": "ランディングページに戻る",
+    "sign up": "サインアップ",
+    "create your personal account": "個人アカウントを作成する",
+    "settings are only available to registered users": "設定は登録ユーザーのみが利用できます",
+    "you are already logged in": "あなたは既にログインしています"
 }

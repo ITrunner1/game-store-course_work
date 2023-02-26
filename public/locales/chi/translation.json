@@ -41,6 +41,19 @@
     "Shooter": "射手",
     "Puzzle": "谜",
     "Racing": "赛车",
-    "Sports": "运动的"
+    "Sports": "运动的",
 
+    "don't overpay for games": "不要为游戏多付钱",
+    "go to store without auth": "未经授权去商店",
+    "go to store": "去商店",
+    "email address": "电子邮件地址",
+    "password": "密码",
+    "forget password": "忘记密码",
+    "first time": "第一次",
+    "create an account": "创建一个帐户",
+    "back to landing page": "返回着陆页",
+    "sign up": "报名",
+    "create your personal account": "创建您的个人帐户",
+    "settings are only available to registered users": "设置仅对注册用户可用",
+    "you are already logged in": "您已经登录"
 }

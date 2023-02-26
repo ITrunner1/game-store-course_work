@@ -13,7 +13,7 @@
     "add to cart": "In den Warenkorb",
     "search the store": "Durchsuchen Sie den Laden",
     "register": "Registrieren",
-    "log in": "Anmeldung",
+    "log in": "Anmelden",
     "your shopping cart is empty": "Dein Einkaufswagen ist leer",
     "go shopping now": "Gehen Sie jetzt einkaufen",
     "ID": "ID",
@@ -41,6 +41,19 @@
     "Shooter": "Schütze",
     "Puzzle": "Puzzle",
     "Racing": "Rennen",
-    "Sports": "Sport"
+    "Sports": "Sport",
     
+    "don't overpay for games": "Zahlen Sie nicht zu viel für Spiele",
+    "go to store without auth": "Gehen Sie ohne Autorisierung ins Geschäft",
+    "go to store": "Zum Laden gehen",
+    "email address": "E-Mail-Addresse",
+    "password": "Passwort",
+    "forget password": "Passwort vergessen",
+    "first time": "Erstes Mal",
+    "create an account": "Ein Konto erstellen",
+    "back to landing page": "Zurück zur Zielseite",
+    "sign up": "Anmeldung",
+    "create your personal account": "Erstellen Sie Ihr persönliches Konto",
+    "settings are only available to registered users": "Einstellungen stehen nur registrierten Benutzern zur Verfügung",
+    "you are already logged in": "Du bist bereits eingeloggt"
 }

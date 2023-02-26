@@ -1,0 +1,61 @@
+@use "_colors";
+
+.LogInPage {
+  text-align: center;
+  padding-top: 7rem;
+  
+  .Form {
+    display: inline-block;
+    background: colors.$bg2;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2rem;
+    margin: 2rem 0 1rem 0
+  }
+
+  form label {
+    float: left;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0
+  }
+
+  input {
+    width: 15rem;
+    padding: .3rem;
+    border-radius: 5px;
+    outline: none;
+    border: none
+  }
+
+  .right-label {
+    float: right;
+    cursor: pointer;
+  }
+
+  .LogInButton {
+    display: block;
+    width: 100%;
+    padding: .3rem;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 3px;
+
+    
+    &:hover {
+      background: #333;
+      transition: all .5s
+   }
+  }
+
+  .Footer { 
+    p {
+      margin: 2;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+

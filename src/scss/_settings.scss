@@ -1,0 +1,32 @@
+@use '_colors';
+
+.SettingsPage {
+    
+    .Container {         
+        text-align: center;
+
+        .Title { 
+            padding-top: 10rem;           
+        }
+
+        .LinkToLogin { 
+           
+            .BtnLogin { 
+                margin-top: 2rem;
+                margin-right: 1rem;
+                padding: 1rem;
+                width: 15rem;
+                background: #222;
+                border: none;
+                color: #fff;
+                font-size: 1.2rem;
+                transition: all .5s;
+                cursor: pointer;     
+                
+                &:hover { 
+                    color: colors.$clr-danger;
+                }
+            }
+        }
+    }
+}

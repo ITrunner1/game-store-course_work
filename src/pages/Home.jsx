@@ -1,9 +1,20 @@
+import { useDispatch } from "react-redux";
+
 import HomeSlider from "../components/HomeSlider";
+import { useAuth } from '../hooks/use-auth';
 
 const Home = () => {
-    return (
-        <div className="slider-wrapper">
-           <HomeSlider />
+    const dispatch = useDispatch();
+
+    const { isAuth } = useAuth();
+
+    return isAuth ? (
+        <div className="slider-wrapper">            
+           <HomeSlider />           
+        </div>
+    ) : ( 
+        <div>
+            <h1></h1>
         </div>
     );
 }

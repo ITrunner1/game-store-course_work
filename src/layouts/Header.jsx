@@ -6,6 +6,8 @@ import { Button } from '@mui/material';
 
 import logo from '../assets/logo.png';
 import Search from '../components/Search';
+import { removeUser } from '../redux/userSlice';
+import { useAuth } from '../hooks/use-auth';
 import { setMenuOn, setMenuOff } from '../redux/menuSlice';
 import { getMenuStatus } from '../redux/menuSlice';
 
@@ -13,6 +15,8 @@ import { getMenuStatus } from '../redux/menuSlice';
 function Header() {    
     const { t } = useTranslation();
     const dispatch = useDispatch(); 
+
+    const { isAuth, email } = useAuth();
     
     return (        
         <div className="Header">
@@ -33,9 +37,29 @@ function Header() {
                 </Button>                
             </div>
             <div className="Right">
-                <span className="reg">{t("register")}</span>
-                <div className="VertLine"></div>
-                <span className="reg">{t("log in")}</span>
+                {isAuth ?
+                    <Button 
+                        className="ExitButton"
+                        onClick={() => dispatch(removeUser())}                        
+                        >
+                            
+                            Exit from Account
+                        </Button> 
+                 : <>
+                 <span className="reg">                     
+                     <Link to = "/signup">
+                         {t("register")}
+                     </Link>
+                     </span>
+                 <div className="VertLine"></div>
+                 <span className="reg">
+                     <Link to = "/login">
+                         {t("log in")}
+                     </Link>
+                 </span>  
+                 </>
+                
+                }
                 <div className = "cart">
                     <Link to = "/cart" className="CartBtn">
                         <IoCartOutline className='Icon' />

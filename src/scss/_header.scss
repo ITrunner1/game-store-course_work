@@ -19,6 +19,15 @@
         gap: 1rem;
         color: white;
 
+        .ExitButton { 
+            color: white;
+            font-size: 20px;
+
+            &:hover{
+              color: colors.$clr-danger;
+          }
+        }
+
         .HeaderMenuButton { 
           padding-right: 1rem;
           .Icon { 
