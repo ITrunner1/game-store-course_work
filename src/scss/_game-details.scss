@@ -10,14 +10,17 @@
       inline: calc(clamp(10px, 3vw, 50px) + 8px)
     }
 
-    .Header { 
-      font-size: 42px;
-      display: flex;
-      margin-bottom: 30px;
+    .GameHeader { 
+      font-size: 46px;      
+      margin-bottom: 30px;   
+      
+      .ToStore{ 
 
-      .GameName {         
-        margin-left: 200px;
-      }
+        .Icon {
+          vertical-align: middle;
+        
+        }
+      }       
     }
   
     .Grid {

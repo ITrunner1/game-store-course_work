@@ -21,36 +21,38 @@ export const GameCard = ({ game }) => {
 
     return (
         <div className="GameCard" key={ game.id }>  
-        <Link to = {`/store/${game.id}` }>                   
-            <GameCover background_image={game.background_image} />
-            <motion.div 
-                className='Info'
-                whileHover={{ height: 170 }}
-                onHoverStart={() => setIsHovered(true)}
-                onHoverEnd={() => setIsHovered(false)}
-                > 
-                    <span className ="Title fs-24">{game?.name}</span>
-                    <div className="Genre">{game?.genre}</div> 
-                    <AnimatePresence>               
-                        {isHovered && (
-                            <Transition className = "MoreInfo">                                
-                                <div className="Developer fs-18">
-                                    <div className="py-1">{t("developer")}: {game.developers}</div>                                    
-                                    <div className="py-1">{t("publisher")}: {game.publishers}</div>
-                                    <div className="py-1">{t("platforms")}: {game.platforms}</div>                                    
-                                </div>  
-                            </Transition>
-                        )}                        
-                    </AnimatePresence>            
-            </motion.div> 
-        </Link>    
-            <div className='Price'>
-                {game.price}$
-                <Button 
-                    onClick={() => { addToCartHandler(game) }}>
-                    {t("add to cart")}
-                </Button>             
-            </div>           
+            <Link to = {`/store/${game.id}` }>                
+                <GameCover background_image={game.background_image} />
+                <div className='Price'>                   
+                    <Button 
+                        onClick={() => { addToCartHandler(game) }}>
+                        {t("add to cart")}
+                    </Button>      
+                    <span className="PriceNumber">{game.price}$</span>       
+                </div>
+            </Link>   
+            <Link to = {`/store/${game.id}` }>  
+                <motion.div 
+                    className='Info'
+                    whileHover={{ height: 170 }}
+                    onHoverStart={() => setIsHovered(true)}
+                    onHoverEnd={() => setIsHovered(false)}
+                    > 
+                        <span className ="Title">{game?.name}</span>
+                        <div className="Genre">{game?.genre}</div> 
+                        <AnimatePresence>               
+                            {isHovered && (
+                                <Transition className = "MoreInfo">                                
+                                    <div className="Developer">
+                                        <div className="Txt">{t("developer")}: {game.developers}</div>                                    
+                                        <div className="Txt">{t("publisher")}: {game.publishers}</div>
+                                        <div className="Txt">{t("platforms")}: {game.platforms}</div>                                    
+                                     </div>  
+                                </Transition>
+                                )}                        
+                        </AnimatePresence>            
+                </motion.div> 
+            </Link>     
         </div>
     )
 }

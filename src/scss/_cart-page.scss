@@ -1,29 +1,47 @@
 @use '_colors';
 
-.EmptyCartPage{
+.EmptyCartPage {
     min-height: 60vh;
-    img{
+
+    .Icon {
+        height: 120px;
         width: 120px;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem;       
     }
-    .shopping-btn{
-        padding: 0.65rem 2.8rem;
-        margin-top: 1.6rem;
-        border: 1px solid;
     
-    }
+    .Container { 
+        text-align: center;
+        margin-top: 260px;
+        margin-bottom: auto;
+        font-size: 42px;
+        
+        .Text { 
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
+        .ToStore {  
+
+            .LinkIcon {    
+                vertical-align: middle;
+                padding-left: 10px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }   
 }
 
-.CartPage{
-    overflow-x: scroll;
-    padding-top: 2rem;
-    min-height: 85vh;
+.CartPage {    
+    padding-top: 2rem;    
 
-    .Container{
-        text-align: center;       
-        .Columns{
-            grid-template-columns: 1fr 4fr 2fr 2fr 2fr 2fr;
-            min-height: 40px;           
+    .Container {
+        text-align: center;   
+
+        .CartColumns {
+            grid-template-columns: 1fr 4fr 2fr 2fr 2fr;
+            min-height: 40px;      
+            font-size: 30px;     
             display: grid;
             align-items: center!important;
             color: white;
@@ -34,7 +52,7 @@
             width: 400px;            
         }
 
-        .CartHeader{
+        .CartHeader {
             margin-bottom: 2rem;
             padding-right: 2rem;
             padding-left: 2rem;
@@ -42,19 +60,31 @@
             border-radius: 3px;
             color: rgba(0, 0, 0, 0.6);
         }
-        .CartBody{
+
+        .CartBody {
             padding-right: 2rem;
             padding-left: 2rem;
             box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
             border-radius: 3px;
             font-size: 14.5px;
-            color: rgba(0, 0, 0, 0.6);
+            color: rgba(0, 0, 0, 0.6);           
+            
+            .CartColumns { 
+                
+                .CartColumnBody { 
+                    font-size: 26px; 
 
-
+                    .CartColumnBody-txt2 { 
+                        margin-top: 10px;
+                        font-size: 17px;
+                    }
+                }
+            }
         }
 
-        .DeleteBtn{
+        .DeleteBtn {
             font-size: 22px;    
+            text-transform: capitalize;
             transition: colors.$transition-ease; 
             background: none;
             color: colors.$white; 
@@ -63,39 +93,38 @@
             &:hover{
                 color: colors.$clr-danger;
             }
-            } 
+        } 
+    }
+
+    .CartFooter {
+        margin-top: 2rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+       
+        .CartFooter-txt {
+            margin-right: -1rem;
         }
 
-        .CartFooter{
-            margin-top: 2rem;
-            padding-right: 2rem;
-            padding-left: 2rem;
-            display: flex;         
-
-            .CartFooter-txt{
-                margin-right: -1rem;
+        .ClearCartBtn {
+            border: 1px solid colors.$clr-danger;;
+            padding: 0.8rem 1rem; 
+            transition: colors.$transition-ease;
+            background: none;
+            color: white;   
+            font-size: 20px;            
+            
+            &:hover {
+                background-color: colors.$clr-danger;                
             }
 
-            .ClearCartBtn{
-                border: 1px solid colors.$clr-danger;;
-                padding: 0.8rem 1rem; 
-                transition: colors.$transition-ease;
-                background: none;
-                color: white;   
-                font-size: 20px;            
-                
-                &:hover{
-                    background-color: colors.$clr-danger;
-                    
-                }
+            .Icon { 
+                vertical-align: middle;
+            }
+        }
 
-                .Icon { 
-                    vertical-align: middle;
-                }
-            }
-            .checkout-btn{
-                padding: 0.8rem 2.8rem;
-                margin-top: 0.7rem;
-            }
+        .checkout-btn {
+            padding: 0.8rem 2.8rem;
+            margin-top: 0.7rem;
         }
     }
+}
