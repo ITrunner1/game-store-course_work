@@ -1,14 +1,6 @@
 @use 'colors';
 
-.GameDetails { 
-    display: flex;
-    flex-direction: column;
-    flex: 1 1;
-
-    margin: {
-      block: 10px 30px;
-      inline: calc(clamp(10px, 3vw, 50px) + 8px)
-    }
+.GameDetails {    
 
     .GameHeader { 
       font-size: 46px;      
@@ -17,24 +9,20 @@
       .ToStore{ 
 
         .Icon {
-          vertical-align: middle;
-        
+          padding-right: 10px;
+          padding-bottom: 10px;          
+          vertical-align: middle;        
         }
       }       
     }
   
-    .Grid {
-      display: grid;
-      grid-template-columns: 1fr max(26vw, 300px);
-      grid-template-rows: 1fr min-content;
-      gap: clamp(15px, 2.5vw, 25px);
+    .Grid {      
+      grid-template-columns: 1fr max(26vw, 300px);      
+      gap: clamp(15px, 2.5vw, 17px);
       flex: 1 1; 
 
       .GameDescription {
         padding: 22px 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
         line-height: 1.3;
         background-color: colors.$bg;
         border-radius: 15px;  
@@ -46,9 +34,6 @@
           float: right;          
           width: fit-content;
           padding: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           gap: 8px;
           background-color: transparent;
           border: none;
@@ -59,25 +44,18 @@
         
           &:hover {
             color: white;
-          }          
-        
-          &:active {
-            transform: scale(0.925) !important;
-          }
+          }    
         }
 
         .About {         
           max-height: 200px;
           padding: 5px;
-          padding-bottom: 0;
-          position: relative;         
-          overflow-y: auto;
-  
-          border-top: {
-            left-radius: 15px;
-            right-radius: 15px;
-          }
+          overflow-y: auto; 
         }
+      }
+
+      .Price { 
+        margin-top: 1.2rem
       }
     }
 }

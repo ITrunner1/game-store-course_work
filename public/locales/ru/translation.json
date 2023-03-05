@@ -55,5 +55,7 @@
     "sign up": "Регистрация",
     "create your personal account": "Создайте ваш личный аккаунт",
     "settings are only available to registered users": "Настройки доступны только для зарегистрированных пользователей",
-    "you are already logged in": "Вы уже авторизовались"
+    "you are already logged in": "Вы уже авторизовались",
+    "no access": "Нет доступа",
+    "you need to register or login": "Вам нужно зарегистрироваться или войти"
 }

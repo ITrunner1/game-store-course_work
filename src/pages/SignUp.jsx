@@ -28,7 +28,7 @@ const SignUp = () => {
             <h2>{t("sign up")}</h2>
             <h4>{t("create your personal account")}</h4>
             <Form 
-                title="Sign up"
+                title={t("sign up")}
                 handleClick={handleSingin}
             />            
             <div className="Footer">                

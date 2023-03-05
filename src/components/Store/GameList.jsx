@@ -1,10 +1,9 @@
 import { GameCard } from "./GameCard";
 import games from "../../utils/games";
-import genres from '../../utils/genres';
 
 const GamesList = () => {
   return (
-    <div className='GameList'>
+    <div className='GameList flex flex-wrap justify-around'>
       {
         games.map(game => { 
           return (

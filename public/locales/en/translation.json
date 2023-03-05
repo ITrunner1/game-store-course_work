@@ -55,5 +55,7 @@
     "sign up": "Sign up",
     "create your personal account": "Create your personal account",
     "settings are only available to registered users": "Settings are only available to registered users",
-    "you are already logged in": "You are already logged in"
+    "you are already logged in": "You are already logged in",
+    "no access": "No access",
+    "you need to register or login": "You need to register or login"
 }

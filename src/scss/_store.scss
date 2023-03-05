@@ -1,10 +1,7 @@
 @use 'colors';
 
 .GameList{
-  row-gap: 2rem;
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: space-around;   
+  row-gap: 2rem;  
   margin: {    
     block: 10px 50px;
     inline: calc(clamp(10px, 3vw, 50px) + 8px)
@@ -28,18 +25,15 @@
   }
 }
 
-.GameCard {
-  background-color: colors.$bg2;
-  color: white;
-  border-radius: 15px;
+.GameCard {  
   overflow: hidden;  
   width: 320px; 
   background-color: rgb(36, 37, 41);
   border-radius: 15px;
-  position: relative;
-  cursor: pointer;
+  position: relative;  
   padding-bottom: 20px;
-  margin-bottom: 30px;  
+  margin-bottom: 30px; 
+  cursor: pointer; 
 
   .Image {
     height: 140px;
@@ -59,12 +53,11 @@
       font-size: 26px;
     }
 
-    .Genre{
+    .Genre {
       position: absolute;
       left: -5px;
       top: 1.6rem;
-      background-color: colors.$bg;
-      color: white;
+      background-color: colors.$bg;      
       font-size: 18px;
       text-transform: capitalize;
       padding: 0.2rem 1rem;
@@ -72,26 +65,20 @@
     }  
 
     .MoreInfo { 
-      margin-top: 6px;
-      margin-bottom: 12px;
+      margin-top: 4px;
+      margin-bottom: 16px;
     }
   }
 
   .Price { 
     margin-top: 10px; 
     margin-bottom: 10px; 
-    margin-left: 10px;    
-    font-size: 20px;
-  }
-
-  .ButtonPrice { 
-    font-size: 14px;
+    margin-left: 10px;
   }
 
   .PriceNumber { 
     margin-left: 4.5rem;
-    font-size: 18px;
+    font-size: 20px;
   }
-
 }
 

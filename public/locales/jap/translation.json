@@ -55,5 +55,7 @@
     "sign up": "サインアップ",
     "create your personal account": "個人アカウントを作成する",
     "settings are only available to registered users": "設定は登録ユーザーのみが利用できます",
-    "you are already logged in": "あなたは既にログインしています"
+    "you are already logged in": "あなたは既にログインしています",
+    "no access": "アクセスなし",
+    "you need to register or login": "登録またはログインが必要です"
 }

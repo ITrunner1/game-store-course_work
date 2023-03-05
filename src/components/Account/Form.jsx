@@ -21,8 +21,7 @@ const Form = ({ title, handleClick }) => {
                         required />
                 </p>
                 <p>
-                    <label>{t("password")}</label>
-                    <Link to="/forget-password"><label className="right-label">{t("forget password")}?</label></Link>
+                    <label>{t("password")}</label>                    
                     <br/>
                     <input 
                         type="password" 

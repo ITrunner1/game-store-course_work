@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { IoMdTrash } from 'react-icons/io'
 import { Link } from 'react-router-dom';
@@ -6,16 +7,18 @@ import { BsCartXFill, BsArrowRight } from 'react-icons/bs';
 import { FaTrashAlt } from 'react-icons/fa'; 
 import { Button } from '@mui/material';
 
-import { getAllCarts, removeFromCart, clearCart, getCartTotal } from '../redux/cartSlice';
+import { getAllCarts, removeFromCart, clearCart } from '../redux/cartSlice';
 import { Transition } from "../components";
 import emptyCart from '../assets/emptyCart.png';
+import games from '../utils/games';
 
 const CartPage = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const carts = useSelector(getAllCarts);
-    const { totalAmount } = useSelector((state) => state.cart);
-
+    const totalPrice = carts.reduce((acc, carts) => acc += carts.price, 0)   
+   
+  
     if(carts.length === 0){
         return (
           <Transition className='EmptyCartPage' direction="left">
@@ -99,11 +102,10 @@ const CartPage = () => {
               </div>
 
               <div className='CartFooterBlock'>
-                <div className='CartFooter-txt'>${totalAmount}</div>                
-              </div>
-              
+                <div className='CartFooter-txt'>{totalPrice} $</div>                
+              </div>              
             </div>
-            <button type = "button" className='checkout-btn'>{t("check out")}</button>
+            <button type = "button" className='CheckoutBtn'>{t("check out")}</button>            
           </div>
         </Transition>
     );

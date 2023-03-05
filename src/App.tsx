@@ -10,6 +10,7 @@ import Store from './pages/Store';
 import Root from './pages/Root';
 import Home from './pages/Home';
 import GamePageDetails from './pages/GamePageDetails';
+import FilterGenrePage from './pages/FilterGenrePage';
 import CartPage from './pages/CartPage';
 import Settings from './pages/Settings';
 import Landing from './pages/Landing';
@@ -17,7 +18,6 @@ import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import store from './redux/store';
 import './scss/App.scss';
-
 
 const App = () => {
 
@@ -34,7 +34,8 @@ const App = () => {
               <Route path="home" element={<Home />} />          
               <Route path="cart" element={<CartPage />} />      
               <Route path="settings" element={<Settings />} />     
-              <Route path='/store/:id' element={<GamePageDetails />} />         
+              <Route path='/store/:id' element={<GamePageDetails />} /> 
+              <Route path='/genre/:genre' element={<FilterGenrePage />} />       
               <Route path='*' element={<h1>Error</h1>} />
             </Route>
           </Routes>

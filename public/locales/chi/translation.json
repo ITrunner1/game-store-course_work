@@ -55,5 +55,7 @@
     "sign up": "报名",
     "create your personal account": "创建您的个人帐户",
     "settings are only available to registered users": "设置仅对注册用户可用",
-    "you are already logged in": "您已经登录"
+    "you are already logged in": "您已经登录",
+    "no access": " 无法访问",
+    "you need to register or login": "您需要注册或登录"
 }

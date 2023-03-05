@@ -47,11 +47,11 @@ const Landing = () => {
                 <div className='ChangeLanguage'>
                     <span>{t("change language")}: </span> 
                     <ButtonGroup varian="contained" aria-label="outlined button group">        
-                        <Button onClick={() => changeLanguage('en')}>English</Button>
-                        <Button onClick={() => changeLanguage('ru')}>Russian</Button>
-                        <Button onClick={() => changeLanguage('ger')}>Deutsch</Button>
-                        <Button onClick={() => changeLanguage('jap')}>日本</Button>
-                        <Button onClick={() => changeLanguage('chi')}>简体中文</Button>
+                        <Button className="BtnLanguage" onClick={() => changeLanguage('en')}>English</Button>
+                        <Button className="BtnLanguage" onClick={() => changeLanguage('ru')}>Russian</Button>
+                        <Button className="BtnLanguage" onClick={() => changeLanguage('ger')}>Deutsch</Button>
+                        <Button className="BtnLanguage" onClick={() => changeLanguage('jap')}>日本</Button>
+                        <Button className="BtnLanguage" onClick={() => changeLanguage('chi')}>简体中文</Button>
                     </ButtonGroup>
                 </div>    
             </Transition>

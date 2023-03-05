@@ -24,7 +24,7 @@ function Header() {
                 <div className="Logo">
                     <img src={logo} className="Image" alt="logo" />
                 </div>
-                <span className="store-name">Game Stop</span>                    
+                <span className="StoreName">Game Stop</span>                    
             </div>
             <div className="Middle">                                        
                 <Search />   
@@ -62,8 +62,7 @@ function Header() {
                 }
                 <div className = "cart">
                     <Link to = "/cart" className="CartBtn">
-                        <IoCartOutline className='Icon' />
-                        <div className = "CartItems-value">0</div>
+                        <IoCartOutline className='Icon' />                        
                     </Link>
                 </div>
             </div>

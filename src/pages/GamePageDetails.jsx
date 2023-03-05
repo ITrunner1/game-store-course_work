@@ -10,35 +10,32 @@ import { IoArrowDown,
 } from 'react-icons/io5';
 
 import { Transition } from '../components';
-import {addToCart, setCartMessageOn, setCartMessageOff, getCartMessageStatus } from '../redux/cartSlice';
+import { addToCart } from '../redux/cartSlice';
 import games from '../utils/games';
 import GamePageDetailsSlider from '../components/GamePageDetailsSlider'
-import CartMessage from '../components/Cart/CartMessage'
-
 
 const GamePageDetails = () => {  
     const { t } = useTranslation(); 
     const dispatch = useDispatch();
-    const {id} = useParams();        
+    const { id } = useParams();        
     const game = games.find((game) => game.id === id);    
-    const [isExpanded, setIsExpanded] = useState(false); 
-    const cartMessageStatus = useSelector(getCartMessageStatus)
+    const [isExpanded, setIsExpanded] = useState(false);    
     
     const addToCartHandler = (game) => { 
         let totalPrice = game.price;
         dispatch(addToCart({...game, totalPrice}))        
     }
-
     
     return (         
         <Transition className="GameDetails" direction="left"> 
             <div className="GameHeader flex align-start justify-between">                
-                <Link className ="ToStore" to="/store">  
-                    <IoArrowBack className="Icon" /> 
+                <Link className ="ToStore" to="/store">                    
+                    <IoArrowBack className="Icon" />
+                    {t("to store")}  
                 </Link>
                 <div className="GameName">{game.name}</div> 
             </div>              
-            <Transition className="Grid" direction="left">               
+            <Transition className="Grid grid" direction="left">               
                 <GamePageDetailsSlider />                               
                     <Transition className="Info">
                         <div>                
@@ -65,13 +62,13 @@ const GamePageDetails = () => {
                                             distance={30}
                                         >                             
                                             <div className="About">
-                                                {game.desc}
+                                                {t(game.desc)}
                                             </div>
                                             <motion.div 
                                                 className='Expand'
                                                 layoutId="expand-button"
                                             >
-                                                <button className="Button" onClick={() => setIsExpanded(false)}>{t("hide")} <IoArrowUp /></button>
+                                                <button className="Button flex" onClick={() => setIsExpanded(false)}>{t("hide")} <IoArrowUp /></button>
                                             </motion.div> 
                                         </Transition>
                                         </>
@@ -79,19 +76,16 @@ const GamePageDetails = () => {
                                             className='Expand'
                                             layoutId="expand-button"
                                             >
-                                            <button className="Button" onClick={() => setIsExpanded(true)}>{t("more")} <IoArrowDown /></button>
+                                            <button className="Button flex" onClick={() => setIsExpanded(true)}>{t("more")} <IoArrowDown /></button>
                                         </motion.div> 
                                     }
                             </motion.div>  
-                            <div className="Price">
-                                {game.price}
-                                     <Transition className="Added">
-                                        {t("added")} 
-                                    </Transition>
-                                     <Button 
-                                        onClick={() => { addToCartHandler(game) }}>
-                                        {t("add to cart")} 
-                                    </Button>
+                            <div className="Price flex align-start justify-between">                                                                  
+                                <Button 
+                                    onClick={() => { addToCartHandler(game) }}>
+                                    {t("add to cart")} 
+                                </Button>
+                                {game.price}$
                             </div>                                 
                     </Transition> 
             </Transition>        

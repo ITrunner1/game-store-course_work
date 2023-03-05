@@ -21,7 +21,6 @@
         }
 
         .ToStore {  
-
             .LinkIcon {    
                 vertical-align: middle;
                 padding-left: 10px;
@@ -33,7 +32,7 @@
 }
 
 .CartPage {    
-    padding-top: 2rem;    
+    padding-top: 2rem;   
 
     .Container {
         text-align: center;   
@@ -44,7 +43,7 @@
             font-size: 30px;     
             display: grid;
             align-items: center!important;
-            color: white;
+            color: colors.$light;
             margin-bottom: 60px;
         }
 
@@ -55,19 +54,14 @@
         .CartHeader {
             margin-bottom: 2rem;
             padding-right: 2rem;
-            padding-left: 2rem;
-            box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
-            border-radius: 3px;
-            color: rgba(0, 0, 0, 0.6);
+            padding-left: 2rem; 
         }
 
         .CartBody {
             padding-right: 2rem;
-            padding-left: 2rem;
-            box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
+            padding-left: 2rem;           
             border-radius: 3px;
-            font-size: 14.5px;
-            color: rgba(0, 0, 0, 0.6);           
+            font-size: 14.5px;                      
             
             .CartColumns { 
                 
@@ -91,7 +85,7 @@
             border: none;
             
             &:hover{
-                color: colors.$clr-danger;
+                color: colors.$danger;
             }
         } 
     }
@@ -106,25 +100,33 @@
         }
 
         .ClearCartBtn {
-            border: 1px solid colors.$clr-danger;;
+            border: 1px solid colors.$danger;;
             padding: 0.8rem 1rem; 
             transition: colors.$transition-ease;
             background: none;
-            color: white;   
-            font-size: 20px;            
+            color: colors.$white;   
+            font-size: 20px;    
+            cursor: pointer;         
             
             &:hover {
-                background-color: colors.$clr-danger;                
+                background-color: colors.$danger;                
             }
 
             .Icon { 
                 vertical-align: middle;
             }
-        }
-
-        .checkout-btn {
-            padding: 0.8rem 2.8rem;
-            margin-top: 0.7rem;
-        }
+        }        
     }
+
+    .CheckoutBtn {
+        border: 1px solid colors.$white;;
+        padding: 0.8rem 2rem;             
+        transition: colors.$transition-ease;
+        background: none;
+        color: white;   
+        font-size: 20px; 
+        float: right; 
+        cursor: pointer; 
+     }
+    
 }

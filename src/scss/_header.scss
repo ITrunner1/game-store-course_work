@@ -19,12 +19,19 @@
         gap: 1rem;
         color: white;
 
+        .StoreName { 
+          
+          @media screen and (max-width: 1000px) {      
+            display: none;
+        }  
+        }
+
         .ExitButton { 
             color: white;
             font-size: 20px;
 
             &:hover{
-              color: colors.$clr-danger;
+              color: colors.$danger;
           }
         }
 
@@ -33,7 +40,7 @@
           .Icon { 
             width: 36px;           
             height: 36px;
-            color: colors.$clr-light;
+            color: colors.$light;
           }
         }
         
@@ -48,7 +55,10 @@
 
         .VertLine { 
           border-left: 1px solid white;
-          height: 40px;          
+          height: 40px; 
+          @media screen and (max-width: 1000px) {      
+            display: none;
+        }           
         }
         
         .CartBtn{
@@ -58,26 +68,14 @@
           .Icon { 
             width: 32px;
             height: 32px;
-          }         
-          
-          .CartItems-value {
-              position: absolute;
-              top: -14px;
-              right: -12px;
-              background-color: colors.$bg;
-              font-size: 14px;
-              font-weight: 500;
-              color: white;
-              padding: 0 0.5rem;          
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-          }
-        }       
-    }
+          }            
+        }
+        
+        .reg { 
 
-    @media screen and (max-width: 600px) {      
-      height: 20px;      
-    }
+          @media screen and (max-width: 1000px) {      
+            display: none;
+        }  
+        }
+    }   
 }

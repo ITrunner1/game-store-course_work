@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -21,16 +21,16 @@ export const GameCard = ({ game }) => {
 
     return (
         <div className="GameCard" key={ game.id }>  
-            <Link to = {`/store/${game.id}` }>                
+            <Link to = {`/store/${game.id}` }>                            
                 <GameCover background_image={game.background_image} />
+            </Link>  
                 <div className='Price'>                   
                     <Button 
                         onClick={() => { addToCartHandler(game) }}>
                         {t("add to cart")}
                     </Button>      
                     <span className="PriceNumber">{game.price}$</span>       
-                </div>
-            </Link>   
+                </div>             
             <Link to = {`/store/${game.id}` }>  
                 <motion.div 
                     className='Info'

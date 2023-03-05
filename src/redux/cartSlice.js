@@ -14,10 +14,7 @@ const storeInLocalStorage = (data) => {
 }
 
 const initialState = { 
-    carts: fetchFromLocalStorage(),
-    itemsCount: 0,
-    totalAmount: 0,
-    isCartMessageOn: false
+    carts: fetchFromLocalStorage()     
 }
 
 const cartSlice = createSlice({
@@ -31,8 +28,8 @@ const cartSlice = createSlice({
             if(isItemInCart){
                 const tempCart = state.carts.map(item => {
                     if(item.id === action.payload.id){
-                    let tempTotalPrice = item.price;
-
+                    let tempTotalPrice = item.price;                  
+                    
                     return { 
                         ...item, price: tempTotalPrice
                     }
@@ -58,28 +55,10 @@ const cartSlice = createSlice({
         clearCart: (state) => {
             state.carts = [];
             storeInLocalStorage(state.carts);
-        },
-
-        getCartTotal: (state) => {
-            state.totalAmount = state.carts.reduce((cartTotal, cartItem) => {
-                return cartTotal + cartItem.temptotalPrice
-            });
-
-            state.itemsCount = state.carts.length;
-        },
-
-        setCartMessageOn: (state) => {
-            state.isCartMessageOn = true;
-        },
-
-        setCartMessageOff: (state) => {
-            state.isCartMessageOn = false;
-        },
+        },       
      }
 })
 
-export const { addToCart, setCartMessageOn, setCartMessageOff, getCartTotal, clearCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, clearCart, removeFromCart } = cartSlice.actions;
 export const getAllCarts = (state) => state.cart.carts;
-export const getCartItemsCount = (state) => state.cart.itemsCount;
-export const getCartMessageStatus = (state) => state.cart.isCartMessageOn;
 export default cartSlice.reducer;

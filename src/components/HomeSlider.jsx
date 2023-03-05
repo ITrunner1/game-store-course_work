@@ -1,12 +1,10 @@
-import Slider from 'react-slick';
 import { sliderImgs } from "../utils/images";
-import { useTranslation } from 'react-i18next';
+import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const HomeSlider = () => {
-    const { t } = useTranslation();
+const HomeSlider = () => {   
 
     const settings = {
         autoplay: true,
@@ -20,8 +18,7 @@ const HomeSlider = () => {
       };
 
     return (        
-        <div className="slider">
-          <h1>{t("home")}</h1>
+        <div className="sliderhome">         
           <div className="container">
             <div className="slider-container">
               <Slider {...settings}>
@@ -29,10 +26,10 @@ const HomeSlider = () => {
                   <img src={sliderImgs[0]} alt="image1" />
                 </div>
                 <div className="slider-item">
-                  <img src={sliderImgs[1]} alt="image1" />
+                  <img src={sliderImgs[1]} alt="image2" />
                 </div>
                 <div className="slider-item">
-                  <img src={sliderImgs[2]} alt="image1" />
+                  <img src={sliderImgs[2]} alt="image3" />
                 </div>
               </Slider>
             </div>
