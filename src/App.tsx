@@ -16,9 +16,9 @@ import Settings from './pages/Settings';
 import Landing from './pages/Landing';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
+import SearchPage from './pages/SearchPage';
 import store from './redux/store';
 import './scss/App.scss';
-import SearchPage from './pages/SearchPage';
 
 const App = () => {
 
