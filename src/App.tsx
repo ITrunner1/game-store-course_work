@@ -18,6 +18,7 @@ import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import store from './redux/store';
 import './scss/App.scss';
+import SearchPage from './pages/SearchPage';
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
             <Route path='signup' element={<SignUp />} /> 
             <Route path='/' element={<Root />}>              
               <Route path='store' element={<Store />} /> 
+              <Route path ="/search/:searchTerm" element = {<SearchPage />} />
               <Route path="home" element={<Home />} />          
               <Route path="cart" element={<CartPage />} />      
               <Route path="settings" element={<Settings />} />     

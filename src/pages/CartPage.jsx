@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { IoMdTrash } from 'react-icons/io'
 import { Link } from 'react-router-dom';
@@ -9,8 +8,6 @@ import { Button } from '@mui/material';
 
 import { getAllCarts, removeFromCart, clearCart } from '../redux/cartSlice';
 import { Transition } from "../components";
-import emptyCart from '../assets/emptyCart.png';
-import games from '../utils/games';
 
 const CartPage = () => {
     const { t } = useTranslation();

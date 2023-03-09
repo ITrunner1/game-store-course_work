@@ -1,8 +1,5 @@
 import { Transition } from '../components';
-import { GameCard } from '../components/Store/GameCard';
 import { useTranslation } from 'react-i18next';
-import games from '../utils/games';
-import genres from '../utils/genres';
 import GamesList from '../components/Store/GameList';
 
 const Store = () => { 

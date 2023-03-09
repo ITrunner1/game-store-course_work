@@ -8,9 +8,7 @@ import logo from '../assets/logo.png';
 import Search from '../components/Search';
 import { removeUser } from '../redux/userSlice';
 import { useAuth } from '../hooks/use-auth';
-import { setMenuOn, setMenuOff } from '../redux/menuSlice';
-import { getMenuStatus } from '../redux/menuSlice';
-
+import { setMenuOn } from '../redux/menuSlice';
 
 function Header() {    
     const { t } = useTranslation();
