@@ -6,7 +6,7 @@ import Loading from './components/Loading';
 
 import './firebase';
 import './18n';
-import './fonts/GTWalsheimPro/stylesheet.css';
+import './fonts/stylesheet.css';
 
 
 

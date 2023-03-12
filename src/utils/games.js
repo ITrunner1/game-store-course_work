@@ -824,6 +824,31 @@ const games = [
             "https://res.cloudinary.com/gianlucajahn/image/upload/v1658238650/tombraider_3_cr0yee.jpg"
         ]
     },
+    {
+        name: "Cheese Wars: The Snack of Affliction",
+        surname: "cheesewars",
+        price: 1,
+        desc: 'This is a story about one person. His name is Andrey Yoshikage. He is 33 years old. His house is located in the northeastern part of Morioh. Returns home, at the latest, at eight in the evening. He will have to fight for what he likes, chips with cheese',
+        link: 'https://tombraider.square-enix-games.com/en-us',
+        release: '12th of March, 2023',
+        platforms: 'PC',
+        genre: 'Adventure',
+        developers: 'Timur Kodirov',
+        publishers: 'Timur Kodirov',
+        inCart: false,
+        selected: false,
+        isHovered: false,
+        isLiked: false,
+        rating: 85,
+        id: '33',
+        background_image: "https://hostimage.su/img/2023-03/12/0v71duxqda564u2tcnx6h3217.png",
+        footage: [
+            "https://i.postimg.cc/Mp5Hqddv/Screenshot-5.png",
+            "https://i.postimg.cc/VvNNp1B4/Screenshot-2.png",
+            "https://i.postimg.cc/cHsvfPC7/Screenshot-3.png",
+            "https://i.postimg.cc/NGn00K6k/Screenshot-4.png"
+        ]
+    },
 ]
 
 export default games;

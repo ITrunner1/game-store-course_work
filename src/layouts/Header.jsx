@@ -9,6 +9,7 @@ import Search from '../components/Search';
 import { removeUser } from '../redux/userSlice';
 import { useAuth } from '../hooks/use-auth';
 import { setMenuOn } from '../redux/menuSlice';
+import { setCartModalOn } from '../redux/cartSlice';
 
 function Header() {    
     const { t } = useTranslation();
@@ -39,8 +40,7 @@ function Header() {
                     <Button 
                         className="ExitButton"
                         onClick={() => dispatch(removeUser())}                        
-                        >
-                            
+                        >                            
                             Exit from Account
                         </Button> 
                  : <>
@@ -59,9 +59,13 @@ function Header() {
                 
                 }
                 <div className = "cart">
-                    <Link to = "/cart" className="CartBtn">
+                    <Button
+                        type="button"
+                        className="HeaderMenuButton" 
+                        onClick = {() => dispatch(setCartModalOn())}
+                    >
                         <IoCartOutline className='Icon' />                        
-                    </Link>
+                    </Button>
                 </div>
             </div>
         </div>
