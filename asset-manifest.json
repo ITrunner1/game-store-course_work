@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/game-store-course_work/static/css/main.3f8c97ab.css",
-    "main.js": "/game-store-course_work/static/js/main.3f94026f.js",
-    "static/media/GTWalsheimPro-Regular.woff2": "/game-store-course_work/static/media/GTWalsheimPro-Regular.6aff6f11d3d29930c9fe.woff2",
-    "static/media/slick.svg": "/game-store-course_work/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/game-store-course_work/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/game-store-course_work/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/game-store-course_work/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/game-store-course_work/index.html",
-    "static/media/getFetch.cjs": "/game-store-course_work/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.3f8c97ab.css.map": "/game-store-course_work/static/css/main.3f8c97ab.css.map",
-    "main.3f94026f.js.map": "/game-store-course_work/static/js/main.3f94026f.js.map"
+    "main.css": "/game-store-course_work/store/static/css/main.718ef52b.css",
+    "main.js": "/game-store-course_work/store/static/js/main.b1e69afb.js",
+    "static/media/GTWalsheimPro-Regular.woff2": "/game-store-course_work/store/static/media/GTWalsheimPro-Regular.6aff6f11d3d29930c9fe.woff2",
+    "static/media/slick.svg": "/game-store-course_work/store/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/game-store-course_work/store/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/game-store-course_work/store/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/game-store-course_work/store/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/game-store-course_work/store/index.html",
+    "static/media/getFetch.cjs": "/game-store-course_work/store/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.718ef52b.css.map": "/game-store-course_work/store/static/css/main.718ef52b.css.map",
+    "main.b1e69afb.js.map": "/game-store-course_work/store/static/js/main.b1e69afb.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f8c97ab.css",
-    "static/js/main.3f94026f.js"
+    "static/css/main.718ef52b.css",
+    "static/js/main.b1e69afb.js"
   ]
 }
