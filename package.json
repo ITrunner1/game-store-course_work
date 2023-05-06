@@ -2,6 +2,7 @@
   "name": "gamestop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ITrunner1.github.io/game-store-course_work",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -33,6 +34,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -58,6 +61,7 @@
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.10",
+    "gh-pages": "^5.0.0",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
     "webpack": "^5.75.0"
