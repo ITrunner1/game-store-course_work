@@ -4,8 +4,6 @@ import { Button } from "@mui/material";
 
 import { Transition } from '../components';
 import { useAuth } from '../hooks/use-auth';
-import HomeSlider from "../components/HomeSlider";
-
 
 const Home = () => {    
     const { t } = useTranslation();
@@ -14,10 +12,7 @@ const Home = () => {
     return isAuth ? (
         <Transition className="Home" direction="left">
             <h1>{t("home")}</h1>
-            <div className="EmailTxt">{t("e-mail")}: {email}</div>
-            <div className="slider-wrapper">            
-                <HomeSlider />           
-            </div>
+            <div className="EmailTxt">{t("e-mail")}: {email}</div>          
         </Transition>
     ) : (
         <Transition className="HomeBlock" direction="left">

@@ -1,11 +1,24 @@
-$bg: #232323;
-$bg2: #1E1E1E;
-$black: #000;
-$white: #fff;
-$light-gray: #F2F2F2;
-$light: #F4F4F4;
-$whitesmoke: #F5F5F5;
-$dark: #212529;
+html[data-theme="dark"] {
+    --background1: #232323;
+    --background2: #1E1E1E;
+    --text: #FFFAFA;  
+    --text2: #FFFFFF;
+    --backgroundCard: rgb(36, 37, 41);
+}
+
+html[data-theme="light"] {
+    --background1: #C0C0C0;
+    --background2: #FFFFFF;
+    --text: #000000;
+    --text2: #FFFAFA;
+    --backgroundCard: #c0c0c0;
+}
+
+$bg: var(--background1);
+$bg2: var(--background2);
+$bgCard: var(--backgroundCard);
+$text: var(--text);
+$text2: var(--text2);
 $danger: #DC3545;
-$gray: #929292;
 $transition-ease: all 300ms ease-in-out;
+

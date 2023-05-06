@@ -28,7 +28,8 @@
 .GameCard {  
   overflow: hidden;  
   width: 320px; 
-  background-color: rgb(36, 37, 41);
+  background-color: colors.$bgCard;
+  color: colors.$text;
   border-radius: 15px;
   position: relative;  
   padding-bottom: 20px;
@@ -57,7 +58,8 @@
       position: absolute;
       left: -5px;
       top: 1.6rem;
-      background-color: colors.$bg;      
+      background-color: colors.$bg2; 
+      color: colors.$text;     
       font-size: 18px;
       text-transform: capitalize;
       padding: 0.2rem 1rem;
@@ -74,6 +76,10 @@
     margin-top: 10px; 
     margin-bottom: 10px; 
     margin-left: 10px;
+
+    Button { 
+      color: colors.$text;
+    }
   }
 
   .PriceNumber { 

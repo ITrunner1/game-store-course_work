@@ -57,5 +57,8 @@
     "settings are only available to registered users": "设置仅对注册用户可用",
     "you are already logged in": "您已经登录",
     "no access": " 无法访问",
-    "you need to register or login": "您需要注册或登录"
+    "you need to register or login": "您需要注册或登录",
+    "exit from account": "退出賬戶",
+    "light": "光",
+    "dark": "黑暗的"
 }

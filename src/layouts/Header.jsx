@@ -1,4 +1,4 @@
-import { IoCartOutline, IoListSharp } from 'react-icons/io5';
+import { IoListSharp } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -9,13 +9,12 @@ import Search from '../components/Search';
 import { removeUser } from '../redux/userSlice';
 import { useAuth } from '../hooks/use-auth';
 import { setMenuOn } from '../redux/menuSlice';
-import { setCartModalOn } from '../redux/cartSlice';
 
 function Header() {    
     const { t } = useTranslation();
     const dispatch = useDispatch(); 
 
-    const { isAuth, email } = useAuth();
+    const { isAuth } = useAuth();
     
     return (        
         <div className="Header">
@@ -55,21 +54,10 @@ function Header() {
                          {t("log in")}
                      </Link>
                  </span>  
-                 </>
-                
-                }
-                <div className = "cart">
-                    <Button
-                        type="button"
-                        className="HeaderMenuButton" 
-                        onClick = {() => dispatch(setCartModalOn())}
-                    >
-                        <IoCartOutline className='Icon' />                        
-                    </Button>
-                </div>
+                 </>                
+                }               
             </div>
-        </div>
-       
+        </div>       
     );
 }
 

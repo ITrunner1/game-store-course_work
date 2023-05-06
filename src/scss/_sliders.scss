@@ -1,29 +1,5 @@
 @use 'colors';
 
-// Home slider
-
-.sliderhome { 
-  
-  .container { 
-    width: 1540px;
-    
-    .slider-container { 
-      overflow-y: hidden;       
-
-      .slider-item {
-        width: 700px;          
-        height: 770px;
-        background-position: center;  
-        background-size: cover;
-        img {
-          height: 770px;            
-          background-size: cover;
-        }
-      }
-    }
-  }
-}  
-
 // Game page details slider
 
 .slider { 

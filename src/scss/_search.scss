@@ -4,13 +4,14 @@
     position: relative;
     display: flex;
     align-items: center;    
+    
 
     .icon { 
         position: absolute;
         left: 1.2rem;
         height: 1.8rem;
         width: 1.8rem;
-        fill: colors.$bg;      
+        color: black;     
     }
 
     .input { 
@@ -18,9 +19,9 @@
         height: 2.5rem;
         border-radius: 0.3rem;
         padding: 0 4.5rem;
-        border: 0;
-        background-color: white;
-        font-size: 1.4rem;
+        border: 0;        
+        font-size: 1.4rem; 
+        color: black;       
 
         @media screen and (max-width: 1000px) {      
             width: 14rem;

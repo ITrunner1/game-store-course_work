@@ -31,8 +31,7 @@ const SignUp = () => {
                 title={t("sign up")}
                 handleClick={handleSingin}
             />            
-            <div className="Footer">                
-                <p><Link to="/landing">{t("back to landing page")}</Link>.</p>
+            <div className="Footer"> 
                 <p><Link to="/store">{t("go to store without auth")}</Link>.</p>
             </div>
         </div>

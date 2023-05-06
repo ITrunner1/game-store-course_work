@@ -15,7 +15,7 @@
         margin-bottom: auto;
         font-size: 42px;
         
-        .Text { 
+        .Text {                        
             margin-top: 20px;
             margin-bottom: 60px;
         }
@@ -43,7 +43,7 @@
             font-size: 30px;     
             display: grid;
             align-items: center!important;
-            color: colors.$light;
+            color: colors.$text;
             margin-bottom: 60px;
         }
 
@@ -81,7 +81,7 @@
             text-transform: capitalize;
             transition: colors.$transition-ease; 
             background: none;
-            color: colors.$white; 
+            color: colors.$text; 
             border: none;
             
             &:hover{
@@ -104,7 +104,7 @@
             padding: 0.8rem 1rem; 
             transition: colors.$transition-ease;
             background: none;
-            color: colors.$white;   
+            color: colors.$text;   
             font-size: 20px;    
             cursor: pointer;         
             
@@ -119,14 +119,13 @@
     }
 
     .CheckoutBtn {
-        border: 1px solid colors.$white;;
+        border: 1px solid colors.$text;
         padding: 0.8rem 2rem;             
         transition: colors.$transition-ease;
         background: none;
-        color: white;   
+        color: colors.$text;   
         font-size: 20px; 
         float: right; 
         cursor: pointer; 
-     }
-    
+     }    
 }

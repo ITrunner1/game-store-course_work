@@ -32,10 +32,10 @@ const GamesSearch = () => {
         ))} 
         {            
           games.filter((game) => {
-            return searchTerm.toLowerCase() === "" ? game : game.publishers.toLowerCase().includes(searchTerm)
+            return searchTerm === "" ? game : game.developers.includes(searchTerm)
             }).map((game) => (
               <GameCard key={game.id} game = {game} /> 
-        ))}
+        ))}         
         {            
           games.filter((game) => {
             return searchTerm.toLowerCase() === "" ? game : game.platforms.toLowerCase().includes(searchTerm)

@@ -55,18 +55,10 @@ const cartSlice = createSlice({
         clearCart: (state) => {
             state.carts = [];
             storeInLocalStorage(state.carts);
-        },       
-
-        setCartModalOn: (state) => { 
-            state.isMenuOn = true;
-        },
-
-        setCartModalOff: (state) => { 
-            state.isMenuOn = false;
-        }
+        }      
      }
 })
 
-export const { addToCart, clearCart, removeFromCart, setCartModalOff, setCartModalOn } = cartSlice.actions;
+export const { addToCart, clearCart, removeFromCart } = cartSlice.actions;
 export const getAllCarts = (state) => state.cart.carts;
 export default cartSlice.reducer;

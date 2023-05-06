@@ -57,5 +57,8 @@
     "settings are only available to registered users": "設定は登録ユーザーのみが利用できます",
     "you are already logged in": "あなたは既にログインしています",
     "no access": "アクセスなし",
-    "you need to register or login": "登録またはログインが必要です"
+    "you need to register or login": "登録またはログインが必要です",
+    "exit from account": "アカウントからの退出",
+    "light": "ライト",
+    "dark": "暗い"
 }

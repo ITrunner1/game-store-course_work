@@ -7,7 +7,7 @@
   .Form {
     display: inline-block;
     background: colors.$bg2;
-    border: 1px solid #ddd;
+    border: 1px solid colors.$text;
     border-radius: 2px;
     padding: 2rem;
     margin: 2rem 0 1rem 0;
@@ -16,15 +16,16 @@
       float: left;
       font-size: 1.1rem;
       margin: 0;
-      padding: 0
+      padding: 0      
     }
   
     input {
+      border: 1px solid colors.$text;
+      color: black;      
       width: 15rem;
       padding: .3rem;
-      border-radius: 5px;
-      outline: none;
-      border: none
+      border-radius: 2px;
+      outline: none;      
     }
 
     .LogInButton {
@@ -34,14 +35,8 @@
       padding: .3rem;
       border: none;
       background: #222;
-      color: #fff;
-      border-radius: 3px;
-  
-      
-      &:hover {
-        background: #333;
-        transition: all .5s
-     }
+      color: colors.$text2;
+      border-radius: 3px;  
     }
   }
 

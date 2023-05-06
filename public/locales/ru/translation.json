@@ -57,5 +57,8 @@
     "settings are only available to registered users": "Настройки доступны только для зарегистрированных пользователей",
     "you are already logged in": "Вы уже авторизовались",
     "no access": "Нет доступа",
-    "you need to register or login": "Вам нужно зарегистрироваться или войти"
+    "you need to register or login": "Вам нужно зарегистрироваться или войти",
+    "exit from account": "Выйти из аккаунта",
+    "light": "Светлая",
+    "dark": "Темная"
 }

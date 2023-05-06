@@ -22,11 +22,9 @@ function Search() {
                 className='input'   
                 onChange={(e) => handleSearchTerm(e)}                          
                 >                 
-                </input>
-                                     
+            </input>                                    
         </div>  
-        </Link> 
-             
+        </Link>              
     );
 }
 

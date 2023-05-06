@@ -17,7 +17,8 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        color: white;
+        margin-right: 2rem;
+        color: colors.$text;
 
         .StoreName { 
           
@@ -27,7 +28,7 @@
         }
 
         .ExitButton { 
-            color: white;
+            color: colors.$text;
             font-size: 20px;
 
             &:hover{
@@ -36,43 +37,33 @@
         }
 
         .HeaderMenuButton { 
-          padding-right: 1rem;
+          padding-right: 1rem;       
+             
           .Icon { 
             width: 36px;           
             height: 36px;
-            color: colors.$light;
+            color: colors.$text;
           }
         }
         
         .Logo {           
           display: flex;
-          width: 5.5rem;        
+          width: 5.5rem;                
 
           .Image { 
-            height: 5rem;
+            height: 5rem;            
           }
         }
 
         .VertLine { 
-          border-left: 1px solid white;
+          border-left: 1px solid colors.$text2;
           height: 40px; 
           @media screen and (max-width: 1000px) {      
             display: none;
         }           
         }
-        
-        .CartBtn{
-          position: relative;
-          margin-right: 20px;
 
-          .Icon { 
-            width: 32px;
-            height: 32px;
-          }            
-        }
-        
-        .reg { 
-
+        .reg {           
           @media screen and (max-width: 1000px) {      
             display: none;
         }  

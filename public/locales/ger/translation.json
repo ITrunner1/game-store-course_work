@@ -57,5 +57,8 @@
     "settings are only available to registered users": "Einstellungen stehen nur registrierten Benutzern zur Verfügung",
     "you are already logged in": "Du bist bereits eingeloggt",
     "no access": "Kein Zugang",
-    "you need to register or login": "Sie müssen sich registrieren oder anmelden"
+    "you need to register or login": "Sie müssen sich registrieren oder anmelden",
+    "exit from account": "Konto verlassen",
+    "light": "Licht",
+    "dark": "Dunkel"
 }

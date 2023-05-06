@@ -9,7 +9,6 @@
 @use '_game-details';
 @use '_cart-page';
 @use '_logIn-page';
-@use '_landing-page';
 @use '_settings';
 
 
@@ -18,12 +17,13 @@
 }
 
 body {    
-    color: colors.$white;
+    color: colors.$text;
     font-size: 1.6rem;    
     background-color: colors.$bg2;    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'GT Walsheim Pro';
+    margin: 0;
 }
 
 a{
@@ -33,13 +33,6 @@ a{
 
 .main-content { 
     margin: 8rem;
-}
-
-.Loading { 
-    margin-top: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 6em
 }
 
 /* flexbox and grid */

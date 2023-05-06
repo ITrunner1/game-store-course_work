@@ -34,11 +34,9 @@ const LogIn = () => {
                     handleClick={handleLogin}
                 />
                 <div className="Footer">
-                    <p>{t("first time")}? <Link to="/signup">{t("create an account")}</Link>.</p>
-                    <p><Link to="/landing">{t("back to landing page")}</Link>.</p>
+                    <p>{t("first time")}? <Link to="/signup">{t("create an account")}</Link>.</p>                    
                     <p><Link to="/store">{t("go to store without auth")}</Link>.</p>
-                </div>
-            
+                </div>            
             </Transition> 
         </div>
     );

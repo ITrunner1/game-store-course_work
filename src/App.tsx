@@ -13,21 +13,20 @@ import GamePageDetails from './pages/GamePageDetails';
 import FilterGenrePage from './pages/FilterGenrePage';
 import CartPage from './pages/CartPage';
 import Settings from './pages/Settings';
-import Landing from './pages/Landing';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import SearchPage from './pages/SearchPage';
 import store from './redux/store';
+import { useTheme } from './hooks/use-theme';
 import './scss/App.scss';
 
 const App = () => {
-
+  const { theme, setTheme } = useTheme();
   return (
       <Provider store = {store}>
         <BrowserRouter>
           <Routes>
-            <Route index element={<Navigate to="landing" replace />} />
-            <Route path='landing' element={<Landing />} /> 
+            <Route index element={<Navigate to="store" replace />} />          
             <Route path='login' element={<LogIn />} /> 
             <Route path='signup' element={<SignUp />} /> 
             <Route path='/' element={<Root />}>              
