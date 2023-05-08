@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/game-store-course_work/static/css/main.3f8c97ab.css",
-    "main.js": "/game-store-course_work/static/js/main.3f94026f.js",
+    "main.js": "/game-store-course_work/static/js/main.0b27e06f.js",
     "static/media/GTWalsheimPro-Regular.woff2": "/game-store-course_work/static/media/GTWalsheimPro-Regular.6aff6f11d3d29930c9fe.woff2",
     "static/media/slick.svg": "/game-store-course_work/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/game-store-course_work/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -10,10 +10,10 @@
     "index.html": "/game-store-course_work/index.html",
     "static/media/getFetch.cjs": "/game-store-course_work/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.3f8c97ab.css.map": "/game-store-course_work/static/css/main.3f8c97ab.css.map",
-    "main.3f94026f.js.map": "/game-store-course_work/static/js/main.3f94026f.js.map"
+    "main.0b27e06f.js.map": "/game-store-course_work/static/js/main.0b27e06f.js.map"
   },
   "entrypoints": [
     "static/css/main.3f8c97ab.css",
-    "static/js/main.3f94026f.js"
+    "static/js/main.0b27e06f.js"
   ]
 }
